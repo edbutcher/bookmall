@@ -1,0 +1,29 @@
+.container {
+    min-width: 1328px;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 51px;
+    border: 1px solid #F1EFF3;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 0 0 #F1EFF3;
+}
+
+.header__brand {
+    margin: 16px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__item {
+    margin: 16px;
+}
