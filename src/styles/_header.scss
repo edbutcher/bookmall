@@ -1,0 +1,88 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 3.25rem;
+    border: 0.0625rem solid $color-lines-light;
+    box-shadow: 0 0.0625rem 0 0 $color-lines-light;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $color-background-main;
+}
+
+.header__brand {
+    height: 100%;
+    box-sizing: border-box;
+    border-right: 0.0625rem solid $color-lines-light;
+}
+
+.header__logo {
+    margin: 1rem 0.9375rem;
+}
+
+.header__expanded {
+    position: relative;
+    height: 1rem;
+    background-color: $color-active;
+    border-radius: 1.875rem;
+    padding: 0.3125rem 1.875rem 0.3125rem 0.625rem;
+    margin: 0.5rem;
+    white-space: nowrap;
+    @extend %text-button;
+
+    &:hover {
+        background-color: $color-hovered;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        top: 0.5rem;
+        right: 0.5rem;
+        height: 0.625rem;
+        width: 0.625rem;
+        background-image: url(../assets/images/arrow-down.svg);
+        background-size: auto 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.header__nav {
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100vw - 9rem - 6rem - 5rem);
+}
+
+.nav__item {
+    margin: 1rem;
+    padding: 0.2rem;
+    position: relative;
+    @extend %text-button;
+
+    &:hover::after {
+        position: absolute;
+        bottom: -0.3125rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 3rem;
+        height: 0.125rem;
+        background: $color-hovered;
+        content: "";
+    }
+
+    a:active {
+        color: $color-active;
+    }
+}
+
+.header__other {
+    display: flex;
+    height: 3.125rem;
+    box-sizing: border-box;
+    border-left: 0.0625rem solid $color-lines-light;
+}

@@ -7,7 +7,7 @@ module.exports = (env) => {
         devtool: "source-map",
         entry: './src/index.js',
         output: {
-            filename: 'main.js',
+            filename: 'bundle.js',
             path: path.resolve(__dirname, 'dist')
         },
         module: {
@@ -34,6 +34,32 @@ module.exports = (env) => {
                         "style-loader",
                         "css-loader",
                         "sass-loader"
+                    ]
+                },
+                {
+                    test: /\.(png|svg|jpg|gif)$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                name: '[name].[ext]',
+                                outputPath: 'assets/images'
+                            }
+                        }
+                        
+                    ]
+                },
+                {
+                    test: /\.(woff|woff2|eot|ttf|otf)$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                name: '[name].[ext]',
+                                outputPath: 'assets/fonts'
+                            }
+                        }
+                        
                     ]
                 }
             ]

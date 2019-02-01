@@ -1,23 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
+
+    <header class="header">
+        <a class="header__brand" href="#">
+            <img class="header__logo" src="./assets/images/bokmal_logo.svg" alt="">
+        </a>
+        <a class="header__expanded" href="#">Для усіх</a>
+        <ul class="header__nav nav">
+            <li class="nav__item">
+                <a href="#">Про Букмоль</a>
+            </li>
+            <li class="nav__item">
+                <a href="#">Співпраця</a>
+            </li>
+            <li class="nav__item">
+                <a href="#">Підтримка</a>
+            </li>
+        </ul>
+        <div class="header__other ">
+            <div class="header__icon icon icon--search"></div>
+            <div class="header__icon icon icon--bookmark"></div>
+        </div>
+    </header>
+
+    <section class="sidebar">
+        <input type="checkbox" id="sidebar__button" checked>
+
+        <div class="sidebar__button">
+            <label for="sidebar__button">
+                <span class="sidebar__icon icon icon--menu-black"></span>
+            </label>
+        </div>
+        <div class="sidebar__menu menu">
+            <ul>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Головна</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">ТОП</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Огляди</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Корисні статті</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Новини</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Авторська колонка</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Інтерактив</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Літклуб</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </section>
     <div class="container">
-        <header class="header">
-            <div class="header__brand">bokmal</div>
-            <div class="header__nav nav">
-                <div class="nav__item">Про Букмоль</div>
-                <div class="nav__item">Співпраця</div>
-                <div class="nav__item">Підтримка</div>
-                <div class="nav__item--search">1</div>
-                <div class="nav__item--bookmark">2</div>
+        <section class="hero-image">
+            <div class="wrapper">
+                <h3 class="hero-image__category">Корисні статті</h3>
+                <h1 class="hero-image__title">Тварини Патріка Джорджа: врятуй їх усіх</h1>
+                <div class="hero-image__info info">
+                    <span class="info__icon icon icon--calendar">1 Жовтняб 2017</span>
+                    <span class="info__icon icon icon--eye">980</span>
+                </div>
+                <div class="hero-image__options">
+                    <a class="hero-image__read-more button">читати</a>
+                    <span class="hero-image__icon icon icon--bookmark"></span>
+                </div>
             </div>
-        </header>
+        </section>
     </div>
 </body>
+
 </html>

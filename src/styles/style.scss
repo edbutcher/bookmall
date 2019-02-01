@@ -1,0 +1,14 @@
+@import 'fonts';
+@import 'normalize';
+
+// Global variables
+@import 'variables';
+@import 'extends';
+
+// Global Base styles
+@import 'base';
+
+// My styles
+@import 'header';
+@import 'sidebar';
+@import 'hero_image';

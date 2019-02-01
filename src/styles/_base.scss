@@ -1,0 +1,78 @@
+:root {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: $color-text-dark;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 3.5rem 0 0 3.125rem;
+}
+
+.button {
+    display: block;
+    width: 5.1875rem;
+    height: 1.8125rem;
+    background-color: $color-active;
+    border-radius: 1.25rem;
+    cursor: pointer;
+
+    line-height: 1.8125rem;
+    text-align: center;
+    text-transform: capitalize;
+
+    @extend %text-button;
+
+    &:hover {
+        background-color: $color-hovered;
+    }
+}
+
+.icon {
+    display: block;
+    margin: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+
+    &--search {
+        background-image: url(../assets/images/search.svg);
+
+        &:hover {
+            background-image: url(../assets/images/search-hover.svg);
+        }
+    }
+
+    &--bookmark {
+        background-image: url(../assets/images/bookmark.svg);
+    }
+
+    &--menu-black {
+        background-image: url(../assets/images/x_black.svg);
+    }
+
+    &--calendar {
+        background-image: url(../assets/images/calendar.svg);
+    }
+
+    &--eye {
+        background-image: url(../assets/images/eye.svg);
+    }
+
+}
+
+.wrapper {
+    width: 75rem;
+}

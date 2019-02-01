@@ -1,0 +1,67 @@
+// Extend/Inheritance
+
+%text-heading-n1 {
+    font-family: $font-primary-extrabold;
+    font-size: $font-xl;
+    color: $color-text-dark;
+}
+
+%text-heading-n2 {
+    font-family: $font-primary-regular;
+    font-size: $font-l;
+    color: $color-text-dark;
+}
+
+%text-heading-n2-bold {
+    font-family: $font-primary-extrabold;
+    font-size: $font-l;
+    color: $color-text-dark;
+}
+
+%text-heading-n3 {
+    font-family: $font-primary-regular;
+    font-size: $font-m;
+    color: $color-text-dark;
+}
+
+%text-heading-n3-semibold {
+    font-family: $font-primary-semibold;
+    font-size: $font-m;
+    color: $color-text-dark;
+}
+
+%text-button {
+    font-family: $font-primary-semibold;
+    font-size: $font-xs;
+    color: $color-text-dark;
+}
+
+%text-regular {
+    font-family: $font-primary-regular;
+    font-size: $font-xs;
+    color: $color-text-dark;
+}
+
+%text-semibold {
+    font-family: $font-primary-semibold;
+    font-size: $font-xs;
+    color: $color-text-dark;
+}
+
+%text-regular-n1 {
+    font-family: $font-secondary-regular;
+    font-size: $font-s;
+    color: $color-text-dark;
+}
+
+%text-regular-n2 {
+    font-family: $font-secondary-extrabold;
+    font-size: $font-s;
+    color: $color-text-dark;
+}
+
+%text-regular-n3 {
+    font-family: $font-secondary-semibold;
+    font-size: $font-s;
+    color: $color-text-dark;
+}
