@@ -9,7 +9,10 @@
     align-items: center;
     justify-content: center;
     padding: 1rem; 
-    
+}
+
+.hero-image__wrapper {
+    width: 75rem;
 }
 
 .hero-image__category {
@@ -20,9 +23,16 @@
 
 .hero-image__info {
     display: flex;
+    justify-content: start;
+    align-items: center;
+    white-space: nowrap;
+    @extend %text-regular;
+    color: $color-background-main;
 }
 
-
+.info__icon:first-child {
+    margin-left: 0;
+}
 
 .hero-image__title {
     @extend %text-heading-n1;
@@ -31,7 +41,6 @@
 
 .hero-image__options {
     display: flex;
+    justify-content: start;
+    align-items: center;
 }
-
-
-

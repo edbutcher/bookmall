@@ -36,6 +36,17 @@ ul {
     }
 }
 
+.icon-l {
+    display: block;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: $font-xs;
+}
+
 .icon {
     display: block;
     margin: 1rem;
@@ -45,7 +56,6 @@ ul {
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
-
 
     &--search {
         background-image: url(../assets/images/search.svg);
@@ -57,6 +67,10 @@ ul {
 
     &--bookmark {
         background-image: url(../assets/images/bookmark.svg);
+    }
+
+    &--bookmark-big {
+        background-image: url(../assets/images/bookmark_big.svg);
     }
 
     &--menu-black {
@@ -75,4 +89,5 @@ ul {
 
 .wrapper {
     width: 75rem;
+    margin: 0 auto;
 }
