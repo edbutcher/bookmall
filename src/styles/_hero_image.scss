@@ -19,11 +19,12 @@
     @extend %text-heading-n3;
     color: $color-active;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .hero-image__info {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     white-space: nowrap;
     @extend %text-regular;
@@ -41,6 +42,6 @@
 
 .hero-image__options {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 }

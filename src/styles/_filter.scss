@@ -1,7 +1,11 @@
 .filter {
-    display: flex;
-    margin: 3.125rem 0;
     color: $color-text-light;
+}
+
+.filter__wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 2rem 1rem 0;
 }
 
 .filter__title {

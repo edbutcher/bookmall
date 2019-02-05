@@ -1,6 +1,7 @@
 .sidebar {
     display: flex;
     position: fixed;
+    z-index: 1;
     top: 3.4rem;
     background-color: $color-background-main;
     height: calc(100% - 3.4rem);

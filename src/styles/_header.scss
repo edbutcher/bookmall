@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
     
     height: 3.25rem;
     border: 0.0625rem solid $color-lines-light;
@@ -14,12 +15,17 @@
 
 .header__brand {
     height: 100%;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     border-right: 0.0625rem solid $color-lines-light;
 }
 
 .header__logo {
-    margin: 1rem 0.9375rem;
+    margin-left: .5rem;
+    width: 100%;
 }
 
 .header__expanded {
@@ -58,10 +64,10 @@
 }
 
 .nav__item {
-    margin: 1rem;
-    padding: 0.2rem;
+    margin: 0.85rem;
     position: relative;
     @extend %text-button;
+    white-space: nowrap;
 
     &:hover::after {
         position: absolute;

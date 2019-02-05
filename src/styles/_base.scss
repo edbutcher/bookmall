@@ -17,6 +17,14 @@ ul {
     margin: 3.5rem 0 0 3.125rem;
 }
 
+.category {
+    text-transform: uppercase;
+    font-family: $font-primary-semibold;
+    font-size: $font-xs;
+    color: $color-active;
+    cursor: pointer;
+}
+
 .button {
     display: block;
     width: 5.1875rem;
@@ -49,16 +57,16 @@ ul {
 
 .icon {
     display: block;
-    margin: 1rem;
-    width: 1.25rem;
+    margin: 0.85rem;
+    width: 1.5rem;
     height: 1.25rem;
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
-    cursor: pointer;
 
     &--search {
         background-image: url(../assets/images/search.svg);
+        cursor: pointer;
 
         &:hover {
             background-image: url(../assets/images/search-hover.svg);
@@ -67,14 +75,17 @@ ul {
 
     &--bookmark {
         background-image: url(../assets/images/bookmark.svg);
+        cursor: pointer;
     }
 
     &--bookmark-big {
         background-image: url(../assets/images/bookmark_big.svg);
+        cursor: pointer;
     }
 
     &--menu-black {
         background-image: url(../assets/images/x_black.svg);
+        cursor: pointer;
     }
 
     &--calendar {
@@ -85,9 +96,4 @@ ul {
         background-image: url(../assets/images/eye.svg);
     }
 
-}
-
-.wrapper {
-    width: 75rem;
-    margin: 0 auto;
 }

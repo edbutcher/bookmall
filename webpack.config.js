@@ -1,18 +1,23 @@
 const path = require('path');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const autoprefixer = require('autoprefixer');
 
 module.exports = (env) => {
+    const isDevelopment = env.mode !== 'production';
+
     return {
         mode: env.mode,
-        devtool: "source-map",
-        entry: './src/index.js',
+        entry: {
+            bundle: './src/index.js'
+        },
         output: {
-            filename: 'bundle.js',
             path: path.resolve(__dirname, 'dist')
         },
+        devtool: isDevelopment && 'source-map',
         module: {
-            rules: [
-                {
+            rules: [{
                     test: /\.js$/,
                     exclude: /node_modules/,
                     use: {
@@ -21,53 +26,106 @@ module.exports = (env) => {
                 },
                 {
                     test: /\.html$/,
-                    use: [
-                      {
+                    use: [{
                         loader: "html-loader",
-                        options: { minimize: true }
-                      }
-                    ]
+                        options: {
+                            minimize: true
+                        }
+                    }]
                 },
                 {
-                    test: /\.scss$/,
+                    test: /\.(scss|css)$/,
                     use: [
-                        "style-loader",
-                        "css-loader",
-                        "sass-loader"
-                    ]
-                },
-                {
-                    test: /\.(png|svg|jpg|gif)$/,
-                    use: [
+                        MiniCssExtractPlugin.loader,
                         {
-                            loader: 'file-loader',
+                            loader: "css-loader",
                             options: {
-                                name: '[name].[ext]',
-                                outputPath: 'assets/images'
+                                sourceMap: isDevelopment,
+                            }
+                        },
+                        {
+                            loader: "postcss-loader",
+                            options: {
+                                autoprefixer: {
+                                    browsers: ["last 2 versions"]
+                                },
+                                sourceMap: isDevelopment,
+                                plugins: () => [
+                                    autoprefixer
+                                ]
+                            },
+                        },
+                        {
+                            loader: "sass-loader",
+                            options: {
+                                sourceMap: isDevelopment,
                             }
                         }
-                        
+                    ]
+                },
+                {
+                    test: /\.(svg|jpg|png|gif)$/,
+                    use: [{
+                            loader: "file-loader",
+                            options: {
+                                name: '[name].[ext]',
+                                outputPath: 'static/images/',
+                                useRelativePath: true,
+                            }
+                        },
+                        {
+                            loader: 'image-webpack-loader',
+                            options: {
+                                mozjpeg: {
+                                    progressive: true,
+                                    quality: 65
+                                },
+                                optipng: {
+                                    enabled: true,
+                                },
+                                pngquant: {
+                                    quality: '65-90',
+                                    speed: 4
+                                },
+                                gifsicle: {
+                                    interlaced: false,
+                                },
+                                webp: {
+                                    quality: 75
+                                }
+                            }
+                        }
                     ]
                 },
                 {
                     test: /\.(woff|woff2|eot|ttf|otf)$/,
-                    use: [
-                        {
+                    use: [{
                             loader: 'file-loader',
                             options: {
                                 name: '[name].[ext]',
-                                outputPath: 'assets/fonts'
+                                outputPath: 'static/fonts'
                             }
                         }
-                        
+
                     ]
                 }
             ]
         },
         plugins: [
-            new HtmlWebPackPlugin({
-              template: "./src/index.html",
-              filename: "./index.html"
+            new MiniCssExtractPlugin({
+                filename: "[name]-styles.css",
+                chunkFilename: "[id].css"
+            }),
+            new HtmlWebpackPlugin({
+                template: "./src/index.html",
+                filename: "./index.html",
+                minify: !isDevelopment && {
+                    html5: true,
+                    collapseWhitespace: true,
+                    caseSensitive: true,
+                    removeComments: true,
+                    removeEmptyElements: true
+                },
             })
         ]
     }
