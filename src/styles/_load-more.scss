@@ -1,0 +1,41 @@
+.load-more__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.load-more__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-active;
+
+        & .load-more__icon {
+            transform: rotate(120deg);
+            transition: transform 200ms;
+        }
+
+        & #load-more__svg {
+            stroke: $color-active;
+        }
+    }
+}
+
+.load-more__icon {
+    margin-right: 1rem;
+    transition: transform 200ms;
+}
+
+.load-more__text {
+    font-family: $font-primary-semibold;
+    font-size: $font-xs;
+    text-align: center;
+    line-height: $font-xs;
+}

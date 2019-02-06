@@ -1,0 +1,14 @@
+.footer {
+    background-color: $color-lines-dark;
+}
+
+.footer__wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 2rem 1rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}

@@ -76,11 +76,19 @@ ul {
     &--bookmark {
         background-image: url(../assets/images/bookmark.svg);
         cursor: pointer;
+
+        &:hover {
+            background-image: url(../assets/images/bookmark_hover.svg);
+        }
     }
 
     &--bookmark-big {
         background-image: url(../assets/images/bookmark_big.svg);
         cursor: pointer;
+
+        &:hover {
+            background-image: url(../assets/images/bookmark_big_hover.svg);
+        }
     }
 
     &--menu-black {

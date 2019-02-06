@@ -6,11 +6,6 @@
     padding: 1rem;
 }
 
-
-
-
-////////////////////////////
-
 .recommendation-left__image {
     width: 60%;
     max-height: 20rem;
@@ -37,7 +32,6 @@
     left: 0;
 }
 
-
 .recommendation-left__title {
     position: relative;
     font-family: $font-primary-extrabold;
@@ -58,10 +52,15 @@
 }
 
 .recommendation-left__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 
     & .info {
         display: flex;
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: flex-end;
         align-items: center;
         font-family: $font-primary-regular;
         font-size: $font-xs;
@@ -70,6 +69,6 @@
 
 .recommendation-left__icon {
     position: absolute;
-    right: 2rem;
+    left: 2rem;
     bottom: -1.85rem;
 }

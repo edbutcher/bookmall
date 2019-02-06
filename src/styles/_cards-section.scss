@@ -18,6 +18,7 @@
 
 .cards-section__container {
     display: flex;
+    justify-content: space-between;
 }
 
 .cards-section__card {
@@ -33,7 +34,7 @@
     position: relative;
     width: 100%;
     img {
-        max-width: 100%;
+        width: 100%;
     }
 }
 
