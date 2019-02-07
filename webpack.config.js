@@ -124,7 +124,6 @@ module.exports = (env) => {
                     collapseWhitespace: true,
                     caseSensitive: true,
                     removeComments: true,
-                    removeEmptyElements: true
                 },
             })
         ]

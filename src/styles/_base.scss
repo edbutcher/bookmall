@@ -104,4 +104,31 @@ ul {
         background-image: url(../assets/images/eye.svg);
     }
 
+    &--facebook {
+        background-image: url(../assets/images/Facebook-color.svg);
+        cursor: pointer;
+
+        &:hover {
+            background-image: url(../assets/images/Facebook_hover-color.svg);
+        }
+    }
+
+    &--instagram {
+        background-image: url(../assets/images/Instagram-color.svg);
+        cursor: pointer;
+
+        &:hover {
+            background-image: url(../assets/images/Instagram-hover-color.svg);
+        }
+    }
+
+    &--twitter {
+        background-image: url(../assets/images/Twitter-color.svg);
+        cursor: pointer;
+
+        &:hover {
+            background-image: url(../assets/images/Twitter_hover-color.svg);
+        }
+    }
+
 }
